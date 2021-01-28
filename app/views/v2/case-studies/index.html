@@ -2,52 +2,47 @@
 {% extends "v2/layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  test
 {% endblock %}
 
 {% block content %}
 
-<section class="welcome">  
+<section class="title">  
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       
-      <div class="govuk-grid-column-two-thirds">
-        
-        <h1 class="govuk-heading-xl govuk-!-padding-top-9">
+      <!-- <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l govuk-!-padding-top-6">
           Case Studies
         </h1>
-
-        <p class="govuk-body-l govuk-!-padding-bottom-9">Founder Sarah Winters (was Richards) defined the term ‘content design’ in the early days of GOV.UK, where she led the award-winning content team in the design.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="browse">
-  <div class="govuk-width-container">
-    <div class="govuk-grid-row govuk-!-padding-top-9">
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Browse By</h2>
-      </div>
-    </div>
-    <div class="govuk-grid-row govuk-!-padding-bottom-9">
-      <div class="govuk-grid-column-one-third govuk-!-padding-2">
-        <a href="/kd" class="card">
-          <h3 class="govuk-heading-m">User Groups</h2>
-          <p class="govuk-body">Browse by particular group demographics or interests</p>
-        </a>
-      </div>
-      <div class="govuk-grid-column-one-third govuk-!-padding-2">
-        <a href="/kd" class="card">
-          <h3 class="govuk-heading-m">Engagement Activity</h2>
-          <p class="govuk-body">Browse by activity types, from citizens panels to surveys</p>
-        </a>
-      </div>
-      <div class="govuk-grid-column-one-third govuk-!-padding-2">
-        <a href="/kd" class="card">
-          <h3 class="govuk-heading-m">Engagement Topic</h2>
-          <p class="govuk-body">Browse by topic area, from climate change to Covid</p>
-        </a>
+      </div> -->
+      <div class="govuk-grid-column-full-width">
+        <div class="">
+          <nav>
+            <ul class="sub-nav govuk-grid-row">
+              <li id="home" class="govuk-grid-column-one-quarter sub-nav-item active">
+                <a class="govuk__link" href="/v2">
+                 View All
+                </a>
+              </li>
+              <li id="home" class="govuk-grid-column-one-quarter sub-nav-item">
+                <a class="govuk__link" href="/v2">
+                 Engagement Activity 
+                </a>
+              </li>
+              <li id="home" class="govuk-grid-column-one-quarter sub-nav-item">
+                <a class="govuk__link" href="/v2">
+                 View all
+                </a>
+              </li>
+              <li id="home" class="govuk-grid-column-one-quarter sub-nav-item">
+                <a class="govuk__link" href="/v2">
+                 View all
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </div>
@@ -57,12 +52,13 @@
   <div class="govuk-width-container">
     <div class="govuk-grid-row govuk-!-padding-top-9">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Latest Case Studies</h2>
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-1">View All</h2>
+        <p class="govuk-body-l">Browse all case studies</p>
       </div>
     </div>
     <div class="govuk-grid-row govuk-!-padding-bottom-9">
       <div class="govuk-grid-column-one-third govuk-!-padding-3">
-        <a href="/kd" class="case-study">
+        <a href="./case-studies/oxford-climate" class="case-study">
           <img src="https://design-system.service.gov.uk/styles/images/default/3by2.jpg" alt="Larry the cat, Chief Mouser to the Cabinet Office, sitting on a meeting table wearing a Union Jack bowtie.">
           <h3 class="govuk-heading-m govuk-!-padding-top-2">Engaging young people in climate action through an online summit</h2>
           <span class="tags">Young People</span><span class="tags">ung People</span><span class="tags">nfmrjknrkfrnrr Young People</span>
@@ -73,18 +69,5 @@
   </div>
 </section>
 
-<section class="share-case">
-  <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-9">
-        <h2 class="govuk-heading-l govuk-!-padding-top-9">
-          Share your Case Study
-        </h1>
-        <p class="govuk-body-l govuk-!-padding-bottom-3">This platform is a work-in-progress. If you have a case study you've had success with, we would love to know about it. Please send an email and we'll be in touch.</p>
-        <a href="" class="link-button large ">Submit Case Study</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 {% endblock %}
