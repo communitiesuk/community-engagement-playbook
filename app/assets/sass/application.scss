@@ -102,6 +102,7 @@ $govuk-assets-path: "/govuk/assets/";
 // Header
 
 .govuk-header {
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
@@ -373,4 +374,41 @@ $govuk-assets-path: "/govuk/assets/";
   border-top: 1px solid govuk-colour("light-grey");
   margin: 0;
   padding-top: 20px;
+}
+
+// Case Study Content
+
+.box-1 {
+  height: 300px;
+  background: red;
+}
+
+.box-2 {
+  background: pink;
+  height: auto;
+
+  .inner-box-3 {
+    background: orange;
+    height: 1000px;
+  }
+
+  .inner-box-2 {
+    background: blue;
+    height: 1000px;
+  }
+
+  .inner-box-1 {
+    background: yellow;
+    height: 500px;
+  }
+}
+
+.empty p {
+  margin-bottom: 1px;
+}
+
+.navigation {
+  a.active {
+    background: blue;
+  }
 }
