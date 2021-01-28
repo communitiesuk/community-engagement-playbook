@@ -31,15 +31,17 @@ $govuk-assets-path: "/govuk/assets/";
 .govuk-heading-l,
 .govuk-heading-m,
 .govuk-heading-s,
-.govuk-header__link {
+.govuk-header__link,
+.govuk-tag {
   font-family: "Inter", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .govuk-body,
 .govuk-body-l,
 .govuk-body-s,
 .govuk-link,
+.govuk-phase-banner__text,
 .govuk-header__navigation-item a {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -52,7 +54,8 @@ $govuk-assets-path: "/govuk/assets/";
 // Links
 
 .link-button,
-.link-button:visited {
+.link-button:visited,
+.link-button:link {
   background: govuk-colour("orange");
   border-radius: 20px;
   margin: 0;
@@ -60,6 +63,11 @@ $govuk-assets-path: "/govuk/assets/";
   color: govuk-colour("white");
   text-decoration: none;
   font-size: 0.9rem !important;
+
+  &.large {
+    font-size: 1.1rem !important;
+    padding: 10px 20px;
+  }
 }
 
 // Layout
@@ -107,9 +115,8 @@ $govuk-assets-path: "/govuk/assets/";
 
 .govuk-header__menu-button {
   color: $govuk-secondary-text-colour;
-  border: 1px solid $govuk-secondary-text-colour;
-  padding: 8px 14px;
-  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  padding-top: 10px;
 }
 
 .govuk-header__container {
@@ -165,7 +172,8 @@ $govuk-assets-path: "/govuk/assets/";
   border-bottom: 1px solid govuk-colour("light-grey");
 }
 
-.govuk-header__navigation-item:last-child {
+.govuk-header__navigation-item:last-child,
+.govuk-header__navigation-item:nth-child(3) {
   border-bottom: 0px solid govuk-colour("light-grey");
 }
 
@@ -227,16 +235,86 @@ $govuk-assets-path: "/govuk/assets/";
   }
 }
 
+// Card
+
+.card {
+  display: block;
+  background: govuk-colour("light-grey");
+  box-sizing: border-box;
+  padding: 24px;
+  border-bottom: 6px solid govuk-colour("blue");
+  min-height: 120px;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: govuk-colour("blue");
+  }
+
+  &:link .govuk-heading-m,
+  &:visited .govuk-heading-m {
+    color: govuk-colour("blue");
+  }
+
+  &:link .govuk-body,
+  &:visited .govuk-body {
+    text-decoration: none;
+    color: govuk-colour("black");
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .card {
+    min-height: 400px;
+
+    .govuk-body {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 48.0625em) {
+  .card {
+    min-height: 180px;
+  }
+}
 // Case study
 
+.case-studies {
+  border-top: 1px solid govuk-colour("light-grey");
+}
+
 .case-study {
+  display: block;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
   img {
     width: 100%;
+  }
+}
+
+.tags {
+  border-radius: 20px;
+  background: govuk-colour("light-grey");
+  display: inline-block;
+  padding: 6px 15px 8px;
+  margin-right: 10px;
+  margin: 0 10px 15px 0;
+  white-space: nowrap;
+  color: govuk-colour("black");
+
+  &:link,
+  &:visited {
+    color: govuk-colour("black");
   }
 }
 
 // Share case
 
 .share-case {
-  background: red;
+  border-top: 1px solid govuk-colour("light-grey");
 }
