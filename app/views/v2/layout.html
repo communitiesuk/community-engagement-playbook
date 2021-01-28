@@ -41,13 +41,61 @@
 {% block header %}
   {% include "includes/cookie-banner.html" %}
   {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "#"
-  }) }}
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+      <div class="govuk-header__logo">
+        <a href="#" class="govuk-header__link govuk-header__link--homepage">
+          <span class="govuk-header__logotype">
+            <span class="govuk-header__logotype-text">
+              Community Engagement Playbook
+            </span>
+          </span>
+        </a>
+      </div>
+      <div class="govuk-header__content">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+        <nav>
+          <ul id="navigation" class="govuk-header__navigation" aria-label="Navigation menu">
+            <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+              <a class="govuk-header__link" href="#1">
+               Home
+              </a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="#2">
+                Case Studies
+              </a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="#3">
+                About
+              </a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="link-button govuk-body-s" href="#4">
+                Submit Case Study
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Prototype"
+    },
+    html: 'This is a prototype',
+    classes: "govuk-width-container"
+    
+  }) 
+}}
   
 {% endblock %}
 
-{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
+{% set containerClasses = "app-\!-full-width-override" %}
+
+{% set mainClasses = mainClasses | default("") %}
 
 {% if useAutoStoreData %}
   {% block footer %}

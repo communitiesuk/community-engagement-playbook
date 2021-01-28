@@ -2,7 +2,7 @@
 $govuk-global-styles: true;
 
 // We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
-$govuk-assets-path: '/govuk/assets/';
+$govuk-assets-path: "/govuk/assets/";
 
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import "lib/extensions/extensions";
@@ -18,3 +18,225 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+// Typography
+
+.govuk-header__navigation {
+  float: right;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+.govuk-heading-xl,
+.govuk-heading-l,
+.govuk-heading-m,
+.govuk-heading-s,
+.govuk-header__link {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.govuk-body,
+.govuk-body-l,
+.govuk-body-s,
+.govuk-link,
+.govuk-header__navigation-item a {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.govuk-body-l {
+  line-height: 1.4;
+}
+
+// Links
+
+.link-button,
+.link-button:visited {
+  background: govuk-colour("orange");
+  border-radius: 20px;
+  margin: 0;
+  padding: 6px 12px 7px;
+  color: govuk-colour("white");
+  text-decoration: none;
+  font-size: 0.9rem !important;
+}
+
+// Layout
+
+.app-\!-full-width-override {
+  width: 100%;
+  margin: 0;
+  max-width: 100%;
+
+  .govuk-main-wrapper {
+    padding: 0;
+  }
+}
+
+.full {
+  width: 100% !important;
+}
+
+// Phase banner
+.govuk-phase-banner {
+  margin-top: 62px;
+  border-bottom: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-phase-banner {
+    margin-top: 70px;
+  }
+}
+
+// Header
+
+.govuk-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.govuk-header__logotype-text {
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  color: $govuk-secondary-text-colour;
+}
+
+.govuk-header__menu-button {
+  color: $govuk-secondary-text-colour;
+  border: 1px solid $govuk-secondary-text-colour;
+  padding: 8px 14px;
+  border-radius: 5px;
+}
+
+.govuk-header__container {
+  border-bottom: 0;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.govuk-header__container {
+  margin-bottom: 0;
+}
+
+.govuk-header__navigation {
+  padding-top: 3px;
+}
+
+.govuk-header {
+  background-color: govuk-colour("white");
+  box-shadow: 0px 1px 0px rgba(17, 17, 26, 0.05),
+    0px 0px 8px rgba(17, 17, 26, 0.1);
+  border-bottom: 0;
+}
+
+.govuk-header__link:link,
+.govuk-header__link:visited {
+  color: $govuk-secondary-text-colour;
+}
+
+.govuk-header__navigation-item--active a:link,
+.govuk-header__navigation-item--active a:hover,
+.govuk-header__navigation-item--active a:visited {
+  color: govuk-colour("orange");
+  font-weight: 600;
+}
+
+.govuk-header__navigation {
+  clear: both;
+}
+
+.govuk-header {
+  padding: 14px 0 8px 0;
+}
+
+.govuk-header__navigation {
+  width: 100%;
+}
+
+.govuk-header__menu-button {
+  top: 0;
+}
+
+.govuk-header__navigation-item {
+  border-bottom: 1px solid govuk-colour("light-grey");
+}
+
+.govuk-header__navigation-item:last-child {
+  border-bottom: 0px solid govuk-colour("light-grey");
+}
+
+@media (min-width: 48.0625em) {
+  .govuk-header {
+    padding-bottom: 0px;
+  }
+
+  .govuk-header__logo {
+    width: auto;
+    float: left;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .govuk-header__content {
+    width: auto;
+    float: right;
+    padding-left: 0;
+    margin-top: 2px;
+  }
+
+  .govuk-header__navigation {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-header {
+    padding: 14px 0;
+  }
+
+  .govuk-header__navigation-item {
+    border-bottom: 0;
+  }
+
+  .govuk-header__navigation-item:last-child {
+    border-bottom: 0;
+  }
+
+  .govuk-header__navigation {
+    width: 100%;
+  }
+
+  .govuk-header__menu-button {
+    top: 0;
+  }
+}
+
+// Welcome
+
+.welcome {
+  background: govuk-colour("blue");
+
+  h1,
+  p {
+    color: #fff;
+  }
+}
+
+// Case study
+
+.case-study {
+  img {
+    width: 100%;
+  }
+}
+
+// Share case
+
+.share-case {
+  background: red;
+}
