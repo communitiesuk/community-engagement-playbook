@@ -63,7 +63,7 @@ $govuk-assets-path: "/govuk/assets/";
 .link-button,
 .link-button:visited,
 .link-button:link {
-  background: govuk-colour("turquoise");
+  background: govuk-colour("blue");
   border-radius: 20px;
   margin: 0;
   padding: 6px 12px 7px;
@@ -75,6 +75,11 @@ $govuk-assets-path: "/govuk/assets/";
     font-size: 1.1rem !important;
     padding: 10px 20px;
   }
+}
+
+*:focus {
+  border: 0;
+  background: 0;
 }
 
 // Layout
@@ -156,7 +161,7 @@ $govuk-assets-path: "/govuk/assets/";
 .govuk-header__navigation-item--active a:link,
 .govuk-header__navigation-item--active a:hover,
 .govuk-header__navigation-item--active a:visited {
-  color: govuk-colour("turquoise");
+  color: govuk-colour("blue");
   font-weight: 600;
 }
 
@@ -235,7 +240,7 @@ $govuk-assets-path: "/govuk/assets/";
 // Welcome
 
 .welcome {
-  background: govuk-colour("turquoise");
+  background: govuk-colour("blue");
 
   h1,
   p {
@@ -250,18 +255,18 @@ $govuk-assets-path: "/govuk/assets/";
   background: govuk-colour("light-grey");
   box-sizing: border-box;
   padding: 24px;
-  border-bottom: 6px solid govuk-colour("turquoise");
+  border-bottom: 6px solid govuk-colour("blue");
   min-height: 120px;
 
   &:link,
   &:visited {
     text-decoration: none;
-    color: govuk-colour("turquoise");
+    color: govuk-colour("blue");
   }
 
   &:link .govuk-heading-m,
   &:visited .govuk-heading-m {
-    color: govuk-colour("turquoise");
+    color: govuk-colour("blue");
   }
 
   &:link .govuk-body,
@@ -338,7 +343,7 @@ $govuk-assets-path: "/govuk/assets/";
   border-top: 1px solid govuk-colour("light-grey");
 
   .sub-nav-item {
-    color: govuk-colour("turquoise");
+    color: govuk-colour("blue");
     font-size: 15px;
     padding: 0px 0;
 
@@ -355,7 +360,7 @@ $govuk-assets-path: "/govuk/assets/";
     .govuk__link {
       width: 100%;
 
-      color: govuk-colour("turquoise");
+      color: govuk-colour("blue");
       padding: 5px 15px 5px 15px;
       display: block;
       box-sizing: border-box;
@@ -388,12 +393,12 @@ $govuk-assets-path: "/govuk/assets/";
 
       &.active {
         border-left: none;
-        color: govuk-colour("turquoise");
-        border-bottom: 5px solid govuk-colour("turquoise");
+        color: govuk-colour("blue");
+        border-bottom: 5px solid govuk-colour("blue");
       }
 
       &.active .govuk__link {
-        color: govuk-colour("turquoise");
+        color: govuk-colour("blue");
       }
     }
   }
@@ -402,7 +407,7 @@ $govuk-assets-path: "/govuk/assets/";
 // title
 
 .title {
-  background: govuk-colour("turquoise");
+  background: govuk-colour("blue");
 
   .govuk-heading-l {
     margin-bottom: 20px;
@@ -440,7 +445,7 @@ $govuk-assets-path: "/govuk/assets/";
 
   a:link,
   a:visited {
-    color: govuk-colour("turquoise");
+    color: govuk-colour("blue");
   }
 
   a:first-child {
@@ -448,7 +453,7 @@ $govuk-assets-path: "/govuk/assets/";
   }
   a.active {
     background: govuk-colour("light-grey");
-    border-left: 4px solid govuk-colour("turquoise");
+    border-left: 4px solid govuk-colour("blue");
   }
 }
 
