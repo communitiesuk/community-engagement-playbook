@@ -43,13 +43,19 @@ $govuk-assets-path: "/govuk/assets/";
 .govuk-link,
 .govuk-phase-banner__text,
 .govuk-header__navigation-item a,
-.govuk__link {
+.govuk__link,
+.govuk-list--bullet li {
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
 
 .govuk-body-l {
   line-height: 1.4;
+}
+
+.govuk-body,
+.govuk-list--bullet li {
+  line-height: 1.51579;
 }
 
 // Links
@@ -378,37 +384,36 @@ $govuk-assets-path: "/govuk/assets/";
 
 // Case Study Content
 
-.box-1 {
-  height: 300px;
-  background: red;
-}
-
-.box-2 {
-  background: pink;
-  height: auto;
-
-  .inner-box-3 {
-    background: orange;
-    height: 1000px;
-  }
-
-  .inner-box-2 {
-    background: blue;
-    height: 1000px;
-  }
-
-  .inner-box-1 {
-    background: yellow;
-    height: 500px;
-  }
-}
-
 .empty p {
   margin-bottom: 1px;
 }
 
 .navigation {
+  a {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    border-bottom: 1px solid govuk-colour("light-grey");
+  }
+
+  a:first-child {
+    border-top: 1px solid govuk-colour("light-grey");
+  }
   a.active {
-    background: blue;
+    background: govuk-colour("light-grey");
+    border-left: 4px solid govuk-colour("blue");
+  }
+}
+
+.case-study-navigation {
+  display: none;
+  width: 23%;
+  max-width: 230px;
+}
+
+@media (min-width: 40.0625em) {
+  .case-study-navigation {
+    display: block;
   }
 }

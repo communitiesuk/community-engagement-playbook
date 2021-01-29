@@ -30,7 +30,7 @@ $(function() {
 
 $( document ).ready(function() {
 
-  var $sticky = $('.box-1');
+  var $sticky = $('.case-study-navigation');
   var $stickyrStopper = $('.govuk-footer');
   if (!!$sticky.offset()) { // make sure ".sticky" element exists
 
