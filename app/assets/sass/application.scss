@@ -444,6 +444,11 @@ $govuk-assets-path: "/govuk/assets/";
       margin: 10px 0;
       box-sizing: border-box;
     }
+
+    .govuk-heading-s {
+      margin: 20px 0px;
+      font-size: 15px;
+    }
   }
 }
 
@@ -467,6 +472,10 @@ $govuk-assets-path: "/govuk/assets/";
         color: $govuk-link-colour;
         margin: 20px 0;
         text-decoration: none;
+      }
+
+      .govuk-heading-s {
+        margin-left: 5px;
       }
 
       .govuk__link:hover {
