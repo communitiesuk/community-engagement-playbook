@@ -265,6 +265,10 @@ $govuk-assets-path: "/govuk/assets/";
   }
 }
 
+.prototype-home {
+  margin-top: 100px;
+}
+
 // Welcome
 
 .welcome {
@@ -277,6 +281,26 @@ $govuk-assets-path: "/govuk/assets/";
 
   .govuk-heading-xl {
     margin-bottom: 20px;
+  }
+}
+
+.browse .govuk-heading-l {
+  margin-bottom: 10px;
+}
+
+// Details
+
+.govuk-details {
+  .govuk-details__summary {
+    color: govuk-colour("white");
+  }
+
+  .govuk-details__text {
+    color: govuk-colour("white");
+  }
+
+  .govuk-details__summary:focus {
+    color: govuk-colour("black");
   }
 }
 
@@ -321,6 +345,24 @@ $govuk-assets-path: "/govuk/assets/";
 @media (min-width: 48.0625em) {
   .card {
     min-height: 200px;
+  }
+}
+
+// Supported by section
+
+.supported {
+  border-top: 1px solid govuk-colour("light-grey");
+
+  .govuk-heading-l {
+    margin-bottom: 20px;
+  }
+
+  .govuk-grid-column-one-quarter {
+    display: block;
+
+    img {
+      width: 100%;
+    }
   }
 }
 // Case study
@@ -422,9 +464,13 @@ $govuk-assets-path: "/govuk/assets/";
 
       .govuk__link {
         display: block;
-        color: $govuk-text-colour;
+        color: $govuk-link-colour;
         margin: 20px 0;
         text-decoration: none;
+      }
+
+      .govuk__link:hover {
+        text-decoration: underline;
       }
 
       &.active {
