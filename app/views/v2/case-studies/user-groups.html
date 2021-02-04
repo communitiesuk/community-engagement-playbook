@@ -6,22 +6,16 @@
 {% endblock %}
 
 {% block content %}
-
+<!-- 
 <section class="sub-nav-holder">  
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
-      
-      <!-- <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l govuk-!-padding-top-6">
-          Case Studies
-        </h1>
-      </div> -->
       <div class="govuk-grid-column-full-width">
         <div class="">
           <nav>
             <ul class="sub-nav">
-              <li class="sub-nav-item">
-                <a class="govuk__link" href="./">
+              <li class="sub-nav-item active">
+                <a class="govuk__link" href="./case-studies/">
                  View all
                 </a>
               </li>
@@ -30,7 +24,7 @@
                  Browse by:
                 </h4>
               </li>
-              <li class="sub-nav-item active">
+              <li class="sub-nav-item">
                 <a class="govuk__link" href="./user-groups">
                  User groups 
                 </a>
@@ -51,23 +45,53 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="case-studies">
   <div class="govuk-width-container">
-    <div class="govuk-grid-row govuk-!-padding-top-9">
-      <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-row govuk-!-padding-top-6">
+      <div class="govuk-grid-column-one-third">
+        <nav class="sidebar-navigation">
+          <ul>
+            <li class="sub-nav-item">
+              <a class="govuk__link" href="./">
+               View All
+              </a>
+            </li>
+            <li class="sub-nav-item">
+              <a class="govuk__link active" href="./user-groups">
+               Browse by user groups 
+              </a>
+            </li>
+            <li class="sub-nav-item">
+              <a class="govuk__link" href="./engagement-activity">
+                Browse by engagement activity 
+              </a>
+            </li>
+            <li class="sub-nav-item">
+              <a class="govuk__link" href="./engagement-topic">
+                Browse by engagement topic
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-top-2">
         <h2 class="govuk-heading-l govuk-!-margin-bottom-1">User groups</h2>
         <p class="govuk-body-l">Browse by particular group demographics or interests</p>
-      </div>
-    </div>
-    <div class="govuk-grid-row govuk-!-padding-bottom-9">
-      <div class="govuk-grid-column-one-third govuk-!-padding-3">
-        <a href="./oxford-climate" class="case-study">
-          <img src="https://design-system.service.gov.uk/styles/images/default/3by2.jpg" alt="Larry the cat, Chief Mouser to the Cabinet Office, sitting on a meeting table wearing a Union Jack bowtie.">
-          <h3 class="govuk-heading-m govuk-!-padding-top-2">Engaging young people in climate action through an online summit</h2>
-          <span class="tags">Young people</span>
+        <a href="./oxford-climate" class="list-view">
+          <div class="govuk-grid-column-one-third">
+            <img src="https://design-system.service.gov.uk/styles/images/default/3by2.jpg" alt="Larry the cat, Chief Mouser to the Cabinet Office, sitting on a meeting table wearing a Union Jack bowtie.">
+          </div>
+          <div class="govuk-grid-column-two-third">
+            <h3 class="govuk-heading-m">Engaging young people in climate action through an online summit</h2>
+            <span class="tags">Young People</span>
+          </div>
         </a>
+      </div>
+      
+      <div class="govuk-grid-column-one-third govuk-!-padding-3">
+        
       </div>
     </div>
   </div>

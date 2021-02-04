@@ -1,0 +1,141 @@
+
+{% extends "v3/layout.html" %}
+
+{% block pageTitle %}
+  Case Studies - Community Engagement Playbook
+{% endblock %}
+
+{% block content %}
+
+<section class="case-studies">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+      
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-form-group">
+        </div>
+        <h4 class="govuk-heading-s">Filter</h4>
+        <div id="filters" class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  User groups
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              <form>
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" value="young-people" id="filter-young-people" type="checkbox">
+                    <label class="govuk-label govuk-checkboxes__label" for="filter-young-people">
+                      Young people
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+            </div>
+          </div>
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Engagement topic
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" value="covid" id="filter-covid-19" type="checkbox">
+                    <label class="govuk-label govuk-checkboxes__label" for="filter-covid-19">
+                      Covid-19
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" value="climate" id="filter-climate" type="checkbox">
+                    <label class="govuk-label govuk-checkboxes__label" for="filter-climate">
+                      Climate
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                  Engagement activity
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+              <fieldset  class="govuk-fieldset">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" value="summit" id="filter-summit" type="checkbox">
+                    <label class="govuk-label govuk-checkboxes__label" for="filter-summit">
+                     Summit
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" value="citizens-panel" id="filter-citizens-panel" type="checkbox">
+                    <label class="govuk-label govuk-checkboxes__label" for="filter-citizens-panel">
+                      Citizens panel
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="govuk-grid-column-two-thirds list">
+        <h1 class="govuk-heading-s">Case studies</h1>
+        <div class="current-filter">
+          <!-- <h4 class="govuk-heading-s">Filter by</h4> -->
+          <span data-id="covid-19" class="filter-item filter-control tags">Covid-19</span><span data-id="citizens-panel" class="filter-item filter-control tags">Citizens panel</span><span data-id="young-people" class="filter-item filter-control tags">Young People</span><span data-id="climate" class="filter-item filter-control tags">Climate</span><span data-id="summit" class="filter-item filter-control tags">Summit</span>
+        </div>
+        <div class="filter-item" data-id="citizens-panel covid-19">
+          <a href="./v3/case-studies/waltham-forest-covid-19" class="list-content">
+            <div class="image-holder">
+              <img src="https://design-system.service.gov.uk/styles/images/default/3by2.jpg" alt="3 Team GB cyclists on the Olympic velodrome.">
+            </div>
+              <div class="info-holder">
+              <h3 class="govuk-heading-m">Running a citizens panel during COVID-19 to gather insights</h3>
+              <span class="tags">Covid-19</span><span class="tags">Citizens panel</span>
+            </div>
+          </a>
+        </div>
+        <div class="filter-item" data-id="climate summit young-people">
+          <a href="./v3/case-studies/oxford-climate" class="list-content">
+            <div class="image-holder">
+              <img src="https://design-system.service.gov.uk/styles/images/default/3by2.jpg" alt="3 Team GB cyclists on the Olympic velodrome.">
+            </div>
+              <div class="info-holder">
+              <h3 class="govuk-heading-m">Engaging young people in climate action through an online summit</h3>
+              <span class="tags">Young people</span><span class="tags">Climate</span><span class="tags">Summit</span>
+            </div>
+          </a>
+        </div>
+        <span class="item" data-id="summit">Summit</span>
+        <span class="item" data-id="young-people climate">Climate, Summit, Young Poeople</span>
+        <span class="item" data-id="young-people">Young People</span>
+        <span class="item" data-id="young-people">Young People</span>
+        <span class="item" data-id="categorya">B</span>
+        <span class="item" data-id="categorya">B</span>
+        <span class="item" data-id="citizens-panel">citizens panel</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

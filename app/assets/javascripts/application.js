@@ -17,6 +17,9 @@ $(function() {
   if(loc === origin + '/v2') {
     $('#home').addClass('govuk-header__navigation-item--active');
   } 
+  if(loc === origin + '/v3') {
+    $('#home').addClass('govuk-header__navigation-item--active');
+  } 
   if(/case-studies/.test(loc)) {
     $('#case-studies').addClass('govuk-header__navigation-item--active');
   }
@@ -26,7 +29,6 @@ $(function() {
 });
 
 // Sticky sidebar
-
 
 $( document ).ready(function() {
 
@@ -68,6 +70,8 @@ $( document ).ready(function() {
   }
 });
 
+// Jump Between Sections
+
 $(document).ready(function() {
   $('a[href*=#]').bind('click', function(e) {
       e.preventDefault(); // prevent hard jump, the default behavior
@@ -83,5 +87,53 @@ $(document).ready(function() {
 
       return false;
   });
+});
+
+// Case Study Filter 
+
+$("#filters :checkbox").on('change', function() {
+
+  if ($('input[type=checkbox]').is(":checked")) {
+    $('.current-filter').show();
+    var re = new RegExp($("#filters :checkbox:checked").map(function() {
+      return this.value;
+      
+        }).get().join("|") );
+  
+      $(".filter-item").each(function() {
+      var $this = $(this);
+      $this[re.source!="" && re.test($this.data("id")) ? "show" : "hide"]();
+      });
+  }
+  else {
+  //none is checked
+  $('.filter-item').css('display', 'inline-block');;
+  $('.filter-control').hide();
+  }
+});
+
+// Remove Filter Item
+
+$('.filter-control').click(function() {
+  var $this = $(this);
+  
+  $('#filter-' + $this.data("id")).prop('checked', false);
+  $('.current-filter').show();
+  if ($('input[type=checkbox]').is(":checked")) {
+    var re = new RegExp($("#filters :checkbox:checked").map(function() {
+      return this.value;
+      
+        }).get().join("|") );
+  
+      $(".filter-item").each(function() {
+      var $this = $(this);
+      $this[re.source!="" && re.test($this.data("id")) ? "show" : "hide"]();
+      });
+  }
+  else {
+    $('.filter-item').css('display', 'inline-block');;
+    $('.filter-control').hide();
+    
+  }
 });
 
