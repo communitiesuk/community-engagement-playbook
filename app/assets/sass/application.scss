@@ -360,12 +360,20 @@ $govuk-assets-path: "/govuk/assets/";
     margin-bottom: 20px;
   }
 
-  .govuk-grid-column-one-quarter {
+  .govuk-grid-column-one-sixth {
+    width: 50%;
     display: block;
+    float: left;
 
     img {
       width: 100%;
     }
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .supported .govuk-grid-column-one-sixth {
+    width: 20%;
   }
 }
 // Case study
