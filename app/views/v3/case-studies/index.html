@@ -62,6 +62,12 @@
                       Climate
                     </label>
                   </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" value="libraries" id="filter-libraries" type="checkbox">
+                    <label class="govuk-label govuk-checkboxes__label" for="filter-libraries">
+                     Libraries
+                    </label>
+                  </div>
                 </div>
               </fieldset>
             </div>
@@ -89,49 +95,57 @@
                       Citizens panel
                     </label>
                   </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" value="ideas-board" id="filter-ideas-board" type="checkbox">
+                    <label class="govuk-label govuk-checkboxes__label" for="filter-ideas-board">
+                      Ideas Board
+                    </label>
+                  </div>
                 </div>
               </fieldset>
             </div>
           </div>
         </div>
       </div>
-
-      
       <div class="govuk-grid-column-two-thirds list">
         <h1 class="govuk-heading-s">Case studies</h1>
         <div class="current-filter">
           <!-- <h4 class="govuk-heading-s">Filter by</h4> -->
-          <span data-id="covid-19" class="filter-item filter-control tags">Covid-19</span><span data-id="citizens-panel" class="filter-item filter-control tags">Citizens panel</span><span data-id="young-people" class="filter-item filter-control tags">Young People</span><span data-id="climate" class="filter-item filter-control tags">Climate</span><span data-id="summit" class="filter-item filter-control tags">Summit</span>
+          <span data-id="covid-19" class="filter-item filter-control tags">Covid-19</span>
+          <span data-id="citizens-panel" class="filter-item filter-control tags">Citizens panel</span>
+          <span data-id="young-people" class="filter-item filter-control tags">Young People</span>
+          <span data-id="climate" class="filter-item filter-control tags">Climate</span>
+          <span data-id="summit" class="filter-item filter-control tags">Summit</span>
+          <span data-id="libraries" class="filter-item filter-control tags">Libraries</span>
+          <span data-id="ideas-board" class="filter-item filter-control tags">Ideas Board</span>
         </div>
-        <div class="filter-item" data-id="citizens-panel covid-19">
-          <a href="./v3/case-studies/waltham-forest-covid-19" class="list-content">
-            <div class="image-holder">
-              <img src="https://design-system.service.gov.uk/styles/images/default/3by2.jpg" alt="3 Team GB cyclists on the Olympic velodrome.">
-            </div>
-              <div class="info-holder">
-              <h3 class="govuk-heading-m">Running a citizens panel during COVID-19 to gather insights</h3>
-              <span class="tags">Covid-19</span><span class="tags">Citizens panel</span>
-            </div>
-          </a>
-        </div>
-        <div class="filter-item" data-id="climate summit young-people">
-          <a href="./v3/case-studies/oxford-climate" class="list-content">
-            <div class="image-holder">
-              <img src="https://design-system.service.gov.uk/styles/images/default/3by2.jpg" alt="3 Team GB cyclists on the Olympic velodrome.">
-            </div>
-              <div class="info-holder">
-              <h3 class="govuk-heading-m">Engaging young people in climate action through an online summit</h3>
-              <span class="tags">Young people</span><span class="tags">Climate</span><span class="tags">Summit</span>
-            </div>
-          </a>
-        </div>
-        <span class="item" data-id="summit">Summit</span>
-        <span class="item" data-id="young-people climate">Climate, Summit, Young Poeople</span>
-        <span class="item" data-id="young-people">Young People</span>
-        <span class="item" data-id="young-people">Young People</span>
-        <span class="item" data-id="categorya">B</span>
-        <span class="item" data-id="categorya">B</span>
-        <span class="item" data-id="citizens-panel">citizens panel</span>
+        <a href="./oxford-climate" data-id="climate summit young-people" class="filter-item list-view">
+          <div class="govuk-grid-column-one-third">
+            <img src="https://design-system.service.gov.uk/styles/images/default/3by2.jpg" alt="Larry the cat, Chief Mouser to the Cabinet Office, sitting on a meeting table wearing a Union Jack bowtie.">
+          </div>
+          <div class="govuk-grid-column-two-third">
+            <h3 class="govuk-heading-m">Engaging young people in climate action through an online summit</h2>
+            <span class="tag-title">Tags</span><span class="tags">Young People</span><span class="tags">Climate</span><span class="tags">Summit</span>
+          </div>
+        </a>
+        <a href="./waltham-forest-covid-19" data-id="covid-19 citizens-panel" class="filter-item list-view">
+          <div class="govuk-grid-column-one-third">
+            <img src="https://design-system.service.gov.uk/styles/images/default/3by2.jpg" alt="Larry the cat, Chief Mouser to the Cabinet Office, sitting on a meeting table wearing a Union Jack bowtie.">
+          </div>
+          <div class="govuk-grid-column-two-third">
+            <h3 class="govuk-heading-m">Running a citizens panel during COVID-19 to gather insights</h2>
+              <span class="tag-title">Tags</span><span class="tags">Covid-19</span><span class="tags">Citizens Panel</span>
+          </div>
+        </a>
+        <a href="./kingston-libraries" data-id="libraries ideas-board" class="filter-item list-view">
+          <div class="govuk-grid-column-one-third">
+            <img src="https://design-system.service.gov.uk/styles/images/default/3by2.jpg" alt="Larry the cat, Chief Mouser to the Cabinet Office, sitting on a meeting table wearing a Union Jack bowtie.">
+          </div>
+          <div class="govuk-grid-column-two-third">
+            <h3 class="govuk-heading-m">Using a creative approach and strategy to community engagement</h2>
+              <span class="tag-title">Tags</span><span class="tags">Libraries</span><span class="tags">Ideas Board</span>
+          </div>
+        </a>
       </div>
     </div>
   </div>

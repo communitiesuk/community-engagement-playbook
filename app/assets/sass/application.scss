@@ -17,7 +17,9 @@ $govuk-assets-path: "/govuk/assets/";
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+/*
+ Customise Prototyping Kit
+*/
 
 // Typography
 
@@ -32,7 +34,9 @@ $govuk-assets-path: "/govuk/assets/";
 .govuk-heading-m,
 .govuk-heading-s,
 .govuk-header__link,
-.govuk-tag {
+.govuk-tag,
+.tag-title,
+.tag-title {
   font-family: "Inter", sans-serif;
   font-weight: 600;
 }
@@ -116,18 +120,6 @@ $govuk-assets-path: "/govuk/assets/";
 
 .full {
   width: 100% !important;
-}
-
-// Phase banner
-.govuk-phase-banner {
-  margin-top: 62px;
-  border-bottom: 0;
-}
-
-@media (min-width: 40.0625em) {
-  .govuk-phase-banner {
-    margin-top: 70px;
-  }
 }
 
 // Header
@@ -277,11 +269,31 @@ $govuk-assets-path: "/govuk/assets/";
   }
 }
 
+// Phase banner
+.govuk-phase-banner {
+  margin-top: 62px;
+  border-bottom: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-phase-banner {
+    margin-top: 70px;
+  }
+}
+
+/*
+  Choose a prototype page
+*/
+
 .prototype-home {
   margin-top: 100px;
 }
 
-// Welcome
+/*
+  Prototype v2
+*/
+
+// Homepage welcome banner
 
 .welcome {
   background: govuk-colour("blue");
@@ -291,28 +303,30 @@ $govuk-assets-path: "/govuk/assets/";
     color: #fff;
   }
 
+  .link-button.large {
+    background: govuk-colour("black");
+  }
+
   .govuk-heading-xl {
     margin-bottom: 20px;
   }
-}
 
-// Details
+  .govuk-details {
+    .govuk-details__summary {
+      color: govuk-colour("white");
+    }
 
-.govuk-details {
-  .govuk-details__summary {
-    color: govuk-colour("white");
-  }
+    .govuk-details__text {
+      color: govuk-colour("white");
+    }
 
-  .govuk-details__text {
-    color: govuk-colour("white");
-  }
-
-  .govuk-details__summary:focus {
-    color: govuk-colour("black");
+    .govuk-details__summary:focus {
+      color: govuk-colour("black");
+    }
   }
 }
 
-// Card
+// Homepage cards
 
 .card {
   display: block;
@@ -356,7 +370,13 @@ $govuk-assets-path: "/govuk/assets/";
   }
 }
 
-// Supported by section
+// Share case study section
+
+.share-case {
+  border-top: 1px solid govuk-colour("light-grey");
+}
+
+// Homepage Supported by section
 
 .supported {
   border-top: 1px solid govuk-colour("light-grey");
@@ -381,7 +401,8 @@ $govuk-assets-path: "/govuk/assets/";
     width: 20%;
   }
 }
-// Case study
+
+// Case studies one third
 
 .case-studies {
   border-top: 1px solid govuk-colour("light-grey");
@@ -397,6 +418,32 @@ $govuk-assets-path: "/govuk/assets/";
 
   img {
     width: 100%;
+  }
+}
+
+// Tags for case studies
+
+.tag-title {
+  font-size: 0.9em;
+  margin: 0 10px 0 0;
+  color: $govuk-text-colour;
+}
+
+.tags {
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-family: "Inter", sans-serif;
+  background: govuk-colour("light-grey");
+  display: inline-block;
+  padding: 6px 15px 8px;
+  margin-right: 10px;
+  margin: 0 10px 15px 0;
+  white-space: nowrap;
+  color: govuk-colour("black");
+
+  &:link,
+  &:visited {
+    color: govuk-colour("black");
   }
 }
 
@@ -429,7 +476,7 @@ $govuk-assets-path: "/govuk/assets/";
   }
 }
 
-// List View
+// List view
 
 .list-view {
   display: block;
@@ -454,224 +501,7 @@ $govuk-assets-path: "/govuk/assets/";
   }
 }
 
-.tags {
-  border-radius: 20px;
-  font-size: 0.9em;
-  font-family: "Inter", sans-serif;
-  background: govuk-colour("light-grey");
-  display: inline-block;
-  padding: 6px 15px 8px;
-  margin-right: 10px;
-  margin: 0 10px 15px 0;
-  white-space: nowrap;
-  color: govuk-colour("black");
-
-  &:link,
-  &:visited {
-    color: govuk-colour("black");
-  }
-}
-
-// Accordion
-
-.govuk-accordion__section-button {
-  font-size: 18px;
-  font-family: "Inter", sans-serif;
-
-  .accordion-default-heading-1 {
-    font-family: "Inter", sans-serif;
-  }
-}
-
-.js-enabled .govuk-accordion__section-button {
-  font-family: "Inter", sans-serif;
-}
-
-// Filter
-
-.current-filter {
-  display: none;
-  height: auto;
-  box-sizing: border-box;
-  border-top: 1px solid $govuk-border-colour;
-
-  .govuk-heading-s {
-    float: left;
-  }
-
-  .tag-holder {
-    float: left;
-  }
-
-  .tags {
-    margin: 15px 15px 15px 0;
-    display: inline-block;
-    border: 1px solid $govuk-border-colour;
-    font-size: 16px;
-    cursor: pointer;
-
-    &:before {
-      display: block;
-      content: "";
-      background-image: url("../images/clear.png");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      width: 20px;
-      height: 20px;
-      float: left;
-      margin-right: 5px;
-      margin-top: 1px;
-    }
-  }
-}
-
-// Side Navigation
-
-// List Flat
-
-.list-content {
-  display: block;
-  height: auto;
-  overflow: auto;
-  padding: 20px 0;
-  border-top: 1px solid $govuk-border-colour;
-
-  &:first-child {
-    border-top: 0;
-  }
-
-  img {
-    width: 100%;
-  }
-}
-
-@media (min-width: 48.0625em) {
-  .image-holder {
-    width: 30%;
-    float: left;
-  }
-
-  .info-holder {
-    float: left;
-    width: calc(70% - 25px);
-    margin-left: 25px;
-
-    h3 {
-      padding-top: 0;
-    }
-  }
-}
-
-// Share case
-
-.share-case {
-  border-top: 1px solid govuk-colour("light-grey");
-}
-
-// Case Studies page
-
-.sub-nav-holder {
-  padding: 20px 0;
-  border-top: 1px solid govuk-colour("light-grey");
-}
-
-.sub-nav {
-  width: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 0 15px;
-
-  .sub-nav-item {
-    color: govuk-colour("blue");
-    font-size: 15px;
-    margin: 10px 0;
-    padding: 0;
-    display: block;
-
-    &.active {
-      padding-left: 0px;
-    }
-
-    &.active .govuk__link {
-      font-weight: 600;
-      color: $govuk-text-colour;
-      text-decoration: none;
-    }
-
-    .govuk__link {
-      width: 100%;
-      color: govuk-colour("blue");
-      display: inline;
-      margin: 10px 0;
-      box-sizing: border-box;
-    }
-
-    .govuk-heading-s {
-      margin: 20px 0px;
-      font-size: 15px;
-    }
-  }
-}
-
-@media (min-width: 40.0625em) {
-  .sub-nav-holder {
-    margin: 0px 0px;
-    background: govuk-colour("light-grey");
-    padding: 0;
-
-    .sub-nav {
-      border-top: none;
-      display: inline;
-    }
-
-    .sub-nav-item {
-      margin: 0 10px 0 15px;
-      float: left;
-
-      .govuk__link {
-        display: block;
-        color: $govuk-link-colour;
-        margin: 20px 0;
-        text-decoration: none;
-      }
-
-      .govuk-heading-s {
-        margin-left: 5px;
-      }
-
-      .govuk__link:hover {
-        text-decoration: underline;
-      }
-
-      &.active {
-        border-left: none;
-        color: govuk-colour("blue");
-        border-bottom: 5px solid govuk-colour("blue");
-      }
-
-      &.active .govuk__link {
-        color: govuk-colour("blue");
-      }
-    }
-  }
-}
-
-// title
-
-.title {
-  background: govuk-colour("blue");
-
-  .govuk-heading-l {
-    margin-bottom: 20px;
-  }
-
-  h1,
-  p {
-    color: #fff;
-  }
-}
-
-// breadcrumb
+// Breadcrumbs
 
 .govuk-breadcrumbs {
   border-top: 1px solid govuk-colour("light-grey");
@@ -679,20 +509,13 @@ $govuk-assets-path: "/govuk/assets/";
   padding-top: 20px;
 }
 
-// Case Study Content
+// Case study navigation
 
 .empty p {
   margin-bottom: 1px;
 }
 
-// Accordion
-
-.govuk-accordion__controls,
-.govuk-form-group {
-  display: none;
-}
-
-.navigation {
+.information-scent {
   a {
     overflow: hidden;
     font-family: "Inter", sans-serif;
@@ -740,8 +563,87 @@ $govuk-assets-path: "/govuk/assets/";
   border-top: 1px solid govuk-colour("light-grey");
 }
 
+.highlight {
+  padding: 20px;
+  border-left: 10px solid govuk-colour("mid-grey");
+  .govuk-body {
+    margin-bottom: 0;
+  }
+}
+
 // Footer
 
 .govuk-footer__meta-item {
-  padding-bottom: 0px;
+  padding-bottom: 0;
+}
+
+/*
+  Prototype v3 with filters  
+*/
+
+// Accordion
+
+.js-enabled .govuk-accordion {
+  border-bottom: 1px solid govuk-colour("light-grey");
+}
+
+.govuk-accordion__controls,
+.govuk-form-group {
+  display: none;
+}
+
+.govuk-accordion__section-button {
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+
+  .accordion-default-heading-1 {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+.js-enabled .govuk-accordion__section-header {
+  border-top: 1px solid govuk-colour("light-grey");
+}
+
+.js-enabled .govuk-accordion__section-button {
+  font-family: "Inter", sans-serif;
+}
+
+// Filter
+
+.current-filter {
+  display: none;
+  height: auto;
+  box-sizing: border-box;
+  border-top: 1px solid govuk-colour("light-grey");
+
+  .govuk-heading-s {
+    float: left;
+  }
+
+  .tag-holder {
+    float: left;
+  }
+
+  .tags {
+    margin: 15px 15px 15px 0;
+    display: inline-block;
+    border: 1px solid $govuk-border-colour;
+    font-size: 16px;
+    padding: 8px 15px 7px 12px;
+    cursor: pointer;
+
+    &:before {
+      display: block;
+      content: "";
+      background-image: url("../images/clear.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 20px;
+      height: 20px;
+      float: left;
+      margin-right: 4px;
+      margin-top: 1px;
+    }
+  }
 }

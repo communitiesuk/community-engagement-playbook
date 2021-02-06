@@ -9,7 +9,7 @@ $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
 
-// Adds active class to meny based on page
+// Adds active class to menu based on page
 
 $(function() {
   var loc = window.location.href; // returns the full URL
@@ -59,8 +59,8 @@ $( document ).ready(function() {
 
     $('.page-section').each(function(i) {
         if ($(this).position().top - 150 <= scrollDistance) {
-            $('.navigation a.active').removeClass('active');
-            $('.navigation a').eq(i).addClass('active');
+            $('.information-scent a.active').removeClass('active');
+            $('.information-scent a').eq(i).addClass('active');
         }
     });
 
@@ -70,7 +70,7 @@ $( document ).ready(function() {
   }
 });
 
-// Jump Between Sections
+// Jump between sections with an offset
 
 $(document).ready(function() {
   $('a[href*=#]').bind('click', function(e) {
@@ -89,7 +89,11 @@ $(document).ready(function() {
   });
 });
 
-// Case Study Filter 
+/*
+  Prototype v3 with filters  
+*/
+
+// Case study filter 
 
 $("#filters :checkbox").on('change', function() {
 
