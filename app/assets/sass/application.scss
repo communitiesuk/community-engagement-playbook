@@ -106,6 +106,18 @@ $govuk-assets-path: "/govuk/assets/";
   color: $govuk-text-colour;
 }
 
+.govuk-link h3 {
+  color: $govuk-link-colour;
+}
+
+.govuk-link:hover h3 {
+  color: $govuk-link-hover-colour;
+}
+
+.govuk-link:visited h3 {
+  color: $govuk-link-visited-colour;
+}
+
 // Layout
 
 .app-\!-full-width-override {
