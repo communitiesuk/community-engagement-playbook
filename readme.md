@@ -14,7 +14,7 @@ The focus of this discovery was to:
 
 We designed two prototypes as part of the discovery. The first was a Figma prototype that we used to test the format, taxonomy, information architecture and case study structure of the playbook. The second built on the insights from testing the Figma prototype and used the GOV.UK prototype kit. This HTML prototype should be tested with users during the alpha phase.
 
-[View Prototypes](https://community-engagement-playbook.herokuapp.com)
+[Open Prototype](https://community-engagement-playbook.herokuapp.com)
 
 - Username: MHCLG
 - Password: MHCLG
