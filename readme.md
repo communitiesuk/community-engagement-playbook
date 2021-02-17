@@ -16,8 +16,8 @@ We designed two prototypes as part of the discovery. The first was a Figma proto
 
 [View Prototypes](https://community-engagement-playbook.herokuapp.com)
 
-> Username: MHCLG
-> Password: MHCLG
+- Username: MHCLG
+- Password: MHCLG
 
 ## Security
 
